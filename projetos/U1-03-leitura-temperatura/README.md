@@ -1,2 +1,2 @@
-# LightBrush
- Projeto final do curso de sistemas embarcados Embarcatech
+# Monitor da Temperatura do RP2040
+Este programa faz uma leitura do sensor de temperatura do RP2040 a cada intervalo de 100ms. A cada 10 leituras, é calculada a média e se a média obtida foi o menor ou o maior valor lido até o momento. Os 3 valores (média atual, média máxima e média mínima) são exibidos no display OLED. O display também emite uma contagem do tempo por meio de uma exibição crescente de pontos.
