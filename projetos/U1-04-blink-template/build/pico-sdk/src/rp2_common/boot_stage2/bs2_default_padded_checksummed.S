@@ -1,4 +1,4 @@
-// Padded and checksummed version of: D:/my_github/pedro_avelar_embarcatech_HBr_2025/projetos/U103-leitura-temperatura/build/pico-sdk/src/rp2_common/boot_stage2/bs2_default.bin
+// Padded and checksummed version of: D:/my_github/pedro_avelar_embarcatech_HBr_2025/projetos/U1-04-blink-template/build/pico-sdk/src/rp2_common/boot_stage2/bs2_default.bin
 
 .cpu cortex-m0plus
 .thumb

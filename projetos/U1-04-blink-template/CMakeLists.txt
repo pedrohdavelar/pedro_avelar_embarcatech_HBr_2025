@@ -28,39 +28,32 @@ set(PICO_BOARD pico_w CACHE STRING "Board type")
 # Pull in Raspberry Pi Pico SDK (must be before project)
 include(pico_sdk_import.cmake)
 
-project(leitura_temp_rp2040 C CXX ASM)
+project(picow_blink C CXX ASM)
+
+
 
 # Initialise the Raspberry Pi Pico SDK
 pico_sdk_init()
 
 # Add executable. Default name is the project name, version 0.1
 
-
-
-add_executable(leitura_temp_rp2040 main.c inc/ssd1306_i2c.c)
-pico_set_program_name(leitura_temp_rp2040 "Leitura do Joystick")
-pico_set_program_version(leitura_temp_rp2040 "0.1")
-
-# Modify the below lines to enable/disable output over UART/USB
-pico_enable_stdio_uart(leitura_temp_rp2040 0)
-pico_enable_stdio_usb(leitura_temp_rp2040 1)
-
-#Generate PIO header
-pico_generate_pio_header(leitura_temp_rp2040 ${CMAKE_CURRENT_LIST_DIR}/ws2818b.pio)
-
-target_link_libraries(leitura_temp_rp2040
+add_executable(picow_blink
+        app/main.c
+        drivers/led_embutido.c
+        hal/hal_led.c
+        )
+target_link_libraries(picow_blink
         pico_stdlib              # for core functionality
         pico_cyw43_arch_none     # we need Wifi to access the GPIO, but we don't need anything else
-        hardware_pio
-        hardware_i2c
-        hardware_dma
-        hardware_clocks
-        hardware_adc
-        hardware_pwm
-        pico_rand
         )
 
+# adiciona o diretório de includes
+target_include_directories(picow_blink PRIVATE include)
+
 # create map/bin/hex file etc.
-pico_add_extra_outputs(leitura_temp_rp2040)
+pico_add_extra_outputs(picow_blink)
+
+# add url via pico_set_program_url
+
 
 

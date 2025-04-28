@@ -1,8 +1,8 @@
-# Install script for directory: D:/my_github/pedro_avelar_embarcatech_HBr_2025/projetos/U103-leitura-temperatura
+# Install script for directory: D:/my_github/pedro_avelar_embarcatech_HBr_2025/projetos/U1-04-blink-template
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/leitura_joystick")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/picow_blink")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("D:/my_github/pedro_avelar_embarcatech_HBr_2025/projetos/U103-leitura-temperatura/build/pico-sdk/cmake_install.cmake")
+  include("D:/my_github/pedro_avelar_embarcatech_HBr_2025/projetos/U1-04-blink-template/build/pico-sdk/cmake_install.cmake")
 
 endif()
 
@@ -51,5 +51,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "D:/my_github/pedro_avelar_embarcatech_HBr_2025/projetos/U103-leitura-temperatura/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "D:/my_github/pedro_avelar_embarcatech_HBr_2025/projetos/U1-04-blink-template/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
